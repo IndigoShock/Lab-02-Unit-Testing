@@ -14,18 +14,18 @@ namespace XUnitTestProject1
 
         [Theory]
 
-        [InlineData(5, 1005)]
-        [InlineData(100, 1105)]
+        [InlineData(5, "1005")]
+        [InlineData(100, "1100")]
 
-        public void CanDepositProperly(decimal value, decimal expectedResult)
+        public void CanDepositProperly(int value, string expectedResult)
         {
             Assert.Equal(expectedResult, Program.AddDeposit(value));
         }
 
         [Theory]
 
-        [InlineData(5, 2100)]
-        [InlineData(-1000, 2105)]
+        [InlineData(5, 995)]
+        [InlineData(-1000, 2000)]
 
         public void CanWithdrawProperly(decimal value, decimal expectedResults)
         {
