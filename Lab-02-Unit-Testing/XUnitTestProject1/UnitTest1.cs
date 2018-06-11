@@ -9,8 +9,8 @@ namespace XUnitTestProject1
         [Fact]
         public void ReturnBalance()
         {
-            Assert.Equal(1000, Program.AddDeposit(0));
             Program.StartingAmount = 1000;
+            Assert.Equal(1000, Program.AddDeposit(0));
         }
 
         [Theory]
@@ -20,8 +20,8 @@ namespace XUnitTestProject1
 
         public void CanDepositProperly(decimal value, decimal expectedResult)
         {
-            Assert.Equal(expectedResult, Program.AddDeposit(value));
             Program.StartingAmount = 1000;
+            Assert.Equal(expectedResult, Program.AddDeposit(value));
         }
 
         [Theory]
@@ -31,8 +31,8 @@ namespace XUnitTestProject1
 
         public void CanWithdrawProperly(decimal value, decimal expectedResults)
         {
-            Assert.Equal(expectedResults, Program.AddWithdraw(value));
             Program.StartingAmount = 1000;
+            Assert.Equal(expectedResults, Program.AddWithdraw(value));
         }
     }
 }

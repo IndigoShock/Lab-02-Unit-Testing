@@ -61,12 +61,12 @@ namespace Lab_02_Unit_Testing
             if (value<0)
             {
                 Console.WriteLine("You cannot negatively deposit.");
-                return value;
+                return StartingAmount;
             }
             else
             {
             StartingAmount = StartingAmount += value;
-                return value;
+                return StartingAmount;
             }
         }
 
