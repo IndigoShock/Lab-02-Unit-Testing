@@ -12,7 +12,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method brings the user back to the main menu giving numbered choices on what to do.
         /// </summary>
         public static void MainMenu()
         {
@@ -26,7 +26,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method adds to the starting amount.
         /// </summary>
         public static void Deposit()
         {
@@ -52,7 +52,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method is separate and used for unit testing. It carries the mathematical portion of the above method.
         /// </summary>
         /// <param name="value"></param>
         /// <returns></returns>
@@ -71,7 +71,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method subtracts away from the starting amount.
         /// </summary>
         public static void Withdraw()
         {
@@ -83,6 +83,7 @@ namespace Lab_02_Unit_Testing
                 AddWithdraw(value);
                 if (StartingAmount < 0)
                 {
+                    userValue = null;
                     Console.WriteLine("You withdrew too much.");
                     Console.ReadLine();
                     MainMenu();
@@ -96,7 +97,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method is for unit testing as well and carries the mathematical functionality of the above method.
         /// </summary>
         /// <param name="value"></param>
         public static decimal AddWithdraw(decimal value)
@@ -106,7 +107,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This shows the starting amount to the user.
         /// </summary>
         public static void SeeBalance()
         {
@@ -123,7 +124,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method exits out of the program.
         /// </summary>
         public static void Exit()
         {
@@ -139,7 +140,7 @@ namespace Lab_02_Unit_Testing
         }
 
         /// <summary>
-        /// 
+        /// This method is for calling an error message.
         /// </summary>
         public static void Problem()
         {
