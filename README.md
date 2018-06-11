@@ -14,6 +14,9 @@ e. If you type in 3, you will get to see your balance. Depending on what you did
 f. If you type in 4, you will then be exited of the program.
 e. Rule of thumb is if you type anything besides any of the choices, you will be either kicked out of the program or given a message saying "Problem occurred."
 
+Visual
+![startupImage](assets/ATMApp.JPG)
+
 4. API
 No API's were harmed in the making of this.
 

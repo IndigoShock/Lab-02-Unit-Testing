@@ -11,6 +11,9 @@ namespace Lab_02_Unit_Testing
             MainMenu();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void MainMenu()
         {
             Console.WriteLine("This is your Bank ATM. Please enter choices 1, 2, 3 or 4.");
@@ -22,6 +25,9 @@ namespace Lab_02_Unit_Testing
             Console.Clear();
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Deposit()
         {
             try
@@ -45,18 +51,28 @@ namespace Lab_02_Unit_Testing
             }
         }
 
-        public static void AddDeposit(decimal value)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        /// <returns></returns>
+        public static decimal AddDeposit(decimal value)
         {
             if (value<0)
             {
                 Console.WriteLine("You cannot negatively deposit.");
+                return value;
             }
             else
             {
             StartingAmount = StartingAmount += value;
+                return value;
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Withdraw()
         {
             try
@@ -79,11 +95,19 @@ namespace Lab_02_Unit_Testing
             }
         }
 
-        public static void AddWithdraw(decimal value)
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="value"></param>
+        public static decimal AddWithdraw(decimal value)
         {
             StartingAmount = StartingAmount - value;
+            return StartingAmount;
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void SeeBalance()
         {
             try
@@ -98,6 +122,9 @@ namespace Lab_02_Unit_Testing
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Exit()
         {
             try
@@ -111,6 +138,9 @@ namespace Lab_02_Unit_Testing
             }
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
         public static void Problem()
         {
             Console.WriteLine("Problem occurred...");

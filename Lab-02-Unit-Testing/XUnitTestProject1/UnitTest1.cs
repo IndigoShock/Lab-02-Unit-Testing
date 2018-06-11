@@ -7,9 +7,9 @@ namespace XUnitTestProject1
     public class UnitTest1
     {
         [Fact]
-        public void ReturnBalance()
+        public decimal ReturnBalance()
         {
-            Assert.Equal(1000, Program.AddDeposit(0));
+            return Assert.Equal(1000, Program.AddDeposit(0));
         }
 
         [Theory]
@@ -17,9 +17,9 @@ namespace XUnitTestProject1
         [InlineData(5, "1005")]
         [InlineData(100, "1100")]
 
-        public void CanDepositProperly(int value, string expectedResult)
+        public decimal CanDepositProperly(decimal value, string expectedResult)
         {
-            Assert.Equal(expectedResult, Program.AddDeposit(value));
+            Assert.Equal(expectedResult, Program.AddDeposit(value, expectedResult));
         }
 
         [Theory]
@@ -27,7 +27,7 @@ namespace XUnitTestProject1
         [InlineData(5, 995)]
         [InlineData(-1000, 2000)]
 
-        public void CanWithdrawProperly(decimal value, decimal expectedResults)
+        public decimal CanWithdrawProperly(decimal value, decimal expectedResults)
         {
             Assert.Equal(expectedResults, Program.AddWithdraw(value));
         }
